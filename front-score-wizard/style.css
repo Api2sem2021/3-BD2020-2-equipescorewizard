@@ -13,8 +13,8 @@ body {
 #login {
     position: absolute;
     top: 90px;
-    left: 800px;
-    background-color: #f7f7f8;
+    left: 500px;
+    background-color: #f7f7f8a2;
 }
 
 #link-voltar {
@@ -46,12 +46,12 @@ body {
 
 
 .btn-custom {
-    background-color: #ebc130;
+    background-color: #ffbf2e;
     width: 100%;
 }
 
 .btn-custom:hover {
-    background-color: #bb8f00;
+    background-color: #ca7900;
     color: white;
 }
 
