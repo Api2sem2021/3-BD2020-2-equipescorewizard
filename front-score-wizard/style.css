@@ -4,11 +4,6 @@ body {
     background-image: url("img/fundo.png");
     background-size: cover;
 }
-/* 
-#imagemlogin {
-    width: 600px;
-    height: 650px;
-} */
 
 #login {
     margin-top: 8%;
@@ -19,19 +14,22 @@ body {
 
 
 #link-voltar {
-    color: black;
+    color: white;
+    font-size: 20px; 
 }
 
-#seta {
-    font-size: 30px;
+#link-voltar:hover {
+    font-size: 20px;
+    color: #ffbf2e;
+    text-decoration: none;
 }
 
-#voltar {
+/* #voltar {
     position: absolute;
     top: 67px;
     left: 100px;
     font-size: 20px;
-}
+} */
 
 .form-style {
     border-top: 0px;
@@ -48,12 +46,13 @@ body {
 
 .btn-custom {
     background-color: #ffbf2e;
+    border-radius: 20px;
     width: 100%;
 }
 
 .btn-custom:hover {
-    background-color: #ca7900;
-    color: white;
+    background-color: #e29f05;
+    border-color: #b07a00;
 }
 
 .bg-custom {
