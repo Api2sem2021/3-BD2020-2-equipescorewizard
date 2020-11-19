@@ -133,7 +133,6 @@ body{
 #img_metas{
     width: 70%;
     height: 70%;
-    margin-left: 10%;
 }
 
 #div_selectobjetivo{
@@ -161,3 +160,31 @@ body{
     margin-left: 10%;
     margin-top: 5%;
 }
+
+#div_imagemobjetivo{
+    width: 100%;
+    margin-top: 10%;
+}
+
+#div_imagemmetas{
+    width: 100%;
+    margin-left: 10%;
+}
+
+#img_objetivo {
+    width: 110%;
+    height: 110%;
+}
+
+
+#div_imagemOriginal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img_bruxoOriginal{
+    margin-top: 5%;
+}
+
