@@ -11,44 +11,13 @@
     <link rel="stylesheet" href="style.css" type="text/css">
 
 	<title>Cadastro</title>
-	<script>
-		$(document).ready(function(){
-			$('form').submit(function(e){    
-				
-				e.preventDefault();
-				
-				var nome = $('#nome').val().trim();
-				
-				var docCli = $('#docCli').val().trim();
-				
-				var dataNasc = $('#dataNasc').val().trim();
-				
-				var emailCli = $('#emailCli').val().trim();
-				
-				var telefone = $('#telefone').val().trim();
-
-				var funcData = JSON.stringify({nome : nome, docCli : docCli, dataNasc : dataNasc, emailCli : emailCli, telefone : telefone});
-				
-				alert(funcData)
-				
-				jQuery.ajax({
-					url : "/submitFunc",
-					type : "POST",
-					data : funcData,
-					dataType : "json",
-					contentType : "application/json; charset=utf-8",
-					success : function() {
-						alert("Save Success!")
-					}
-				});
-				
-			});
-		});
-	</script>
   </head>
   <body>
 		
-	
+	<a href="/index" id="link-voltar">
+            <i class="fas fa-arrow-alt-circle-left ml-5 mt-5"></i>
+            <span class="font-weight-bold">Voltar</span>
+    </a>
 	<div class="card bg-custom m-5 p-2">
         <div class="card bg-transparent form-style m-3 p-2 mb-5">
             <h1>Cadastro</h1>
@@ -64,19 +33,26 @@
                     <input type="text" th:field="*{nome}" class="form-control form-style mb-5"/>
                 </div>
                 <div class="form-group col-4">
-                    <label for="email">Data de nascimento:</label>
-					<input type="date" required="required" id="dataNasc" name="dataNasc" style="width: 100%" value="" />
-                </div>
-                 <div class="form-group col-4">
-                    <label for="InputEmail">E-mail:</label>
-                    <input type="email" required="required" id="emailCli" name="emailCli" style="width: 100%" value="" />
+                    <label for="InputEmail">Sexo:</label>
+                    <input type="text" th:field="*{sexo}" class="form-control form-style mb-5"/>
                 </div>
                 <div class="form-group col-4">
-                    <label for="InputCelular">(DDD) Celular:</label>
-                    <input type="tel" required="required" id="telefone" name="telefone" style="width: 100%" value="" />
+                    <label for="email">Ano de nascimento:</label>
+					<input type="number" th:field="*{anoNascimento}" class="form-control form-style mb-5" />
                 </div>
-                
-                <button type="submit" class="btn btn-custom m-4">Cadastrar</button>
+                <div class="form-group col-4">
+                    <label for="InputCidade">Cidade:</label>
+                    <input type="text" th:field="*{cidade}" class="form-control form-style mb-5" />
+                </div>
+                <div class="form-group col-4">
+                    <label for="InputEstado">Estado:</label>
+                    <input type="tel" th:field="*{estado}" class="form-control form-style mb-5" />
+                </div>
+                <div class="form-group col-4">
+                    <label for="InputEstado">Senha:</label>
+                    <input type="password" th:field="*{senha}" class="form-control form-style mb-5" />
+                </div>
+                <p><input type="submit" onclick="window.location.href='/index'" class="btn mt-4 btn-custom" value="Submit" /> </p>
             </form>
         </div>
     </div>
