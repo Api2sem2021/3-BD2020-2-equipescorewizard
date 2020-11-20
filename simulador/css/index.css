@@ -179,12 +179,38 @@ body{
 
 #div_imagemOriginal{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
 }
 
 #img_bruxoOriginal{
-    margin-top: 5%;
+    margin-top: 15%;
 }
 
+#div_resultado{
+   
+    width: 180%;
+    height: 100%;
+    margin-left: -40%;
+}
+
+.letraResultado{
+    font-family: Optima, sans-serif;
+    color: cadetblue;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.letraResultadoParabens{
+    font-family: Optima, sans-serif;
+    color: chocolate;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+#btn_novasimulacao{
+    width: 30%;
+    float: right;
+}

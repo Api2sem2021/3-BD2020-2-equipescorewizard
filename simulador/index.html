@@ -19,44 +19,7 @@
        <div id="div_topo">
         </div>
         <div id="div_conteudo">
-            <div id="div_conteudotopo">
-                        <div class="form-row">
-                            <div class="form-group col-md-3">
-                                
-                                
-                            </div>
-                            <div class="form-group col-md-6">
-                                
-                                
-                                     </div>
-                            <div class="form-group col-md-3">
-                                
-                                
-                            </div>
-                            
-                        </div>
-                </div>
-                <div id="div_conteudocentral">
-                    <div class="form-row">
-                            <div class="form-group col-md-10">
-                                
-                                    <div id="div_imagemOriginal">
-                                        <img id="img_bruxoOriginal" src="images/ico_bruxoOriginal.jpeg">
-                                    </div>
-                            </div>
-                      </div>                                     
-                </div>
-                    
-                <div id="div_conteudorodape">
-                    <div class="form-row">
-                            <div class="form-group col-md-11">
-                               
-                                
-                            </div>
-                            
-                        </div>
-            </div>
-        
+            
             
             
             
@@ -88,24 +51,18 @@
     
     <script type="text/javascript">
         
+        //setInterval(ContarSegundos, 1000);
+        
         //MOVER IMAGENS//
         
         
-            $(document).ready(function(){
-              $("#img_bruxoOriginal").animate({ 
-                // distancia da margem a esquerda
-                marginRight: "500px",
-                // distância do topo
-                width: "300px"
-                // tempo de execucao - milissegundos
-                }, 1000, function() {
-                 $(this).html("chegamos!");
-                });
+            $(window).ready(function(){
+              
               });
         
         
         window.onload = function (){
-           //telaInicial();
+           telaInicial();
         }
         
         function telaInicial(){
@@ -366,7 +323,7 @@
                     <div class="form-row">
                             <div class="form-group col-md-11">
                                 <div id="div_botoes">
-                                    <button type="button" class="btn btn-outline-success" id="btn_avancar" onclick="passo3();">Avançar</button>
+                                    <button type="button" class="btn btn-outline-success" id="btn_avancar" onclick="telaResultado();">Avançar</button>
                                     <button type="button" class="btn btn-outline-danger" id="btn_voltar" onclick="passo1();">Voltar</button>
                                 </div>
                                
@@ -382,7 +339,101 @@
         }
         
         
-    
+        function telaResultado(){
+            
+            document.getElementById("div_conteudo").innerHTML = "";
+            
+            recebeHtml = `<div id="div_conteudotopo">
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                
+                                
+                            </div>
+                            <div class="form-group col-md-6">
+                                
+                                
+                                     </div>
+                            <div class="form-group col-md-3">
+                                
+                                
+                            </div>
+                            
+                        </div>
+                </div>
+                <div id="div_conteudocentral">
+                    <div class="form-row">
+                            <div class="form-group col-md-6">
+                                
+                                    <div id="div_imagemOriginal">
+                                        <img id="img_bruxoOriginal" src="images/ico_bruxoOriginal.jpeg">
+                                    </div>
+                                    
+                            </div>
+                        <div class="form-group col-md-4">
+                                
+                                    <div id="div_resultado">
+                                       
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                            </div>
+                      </div>                                     
+                </div>
+                    
+                <div id="div_conteudorodape">
+                    
+            </div>
+        `;
+            
+            document.getElementById("div_conteudo").innerHTML += recebeHtml;
+            
+            $("#img_bruxoOriginal").animate({ 
+                // distancia da margem a esquerda
+                marginRight: "260px",
+                // distância do topo
+                width: "300px"
+                // tempo de execucao - milissegundos
+                }, 1000, function() {
+                 textoResultado();
+                });
+            
+            
+        }
+        
+        function textoResultado(){
+            
+            
+            recebeHtml = ` <div class="form-col">
+                <div class="form-group row-md-4">
+                    <label class="letraResultado">Seu Score será de 760!</label>
+                </div>
+                 <div class="form-group row-md-4">
+                     <label class="letraResultado">Você terá 80% de atingir "objetivo" com as metas selecionadas! </label>
+                </div>
+                <div class="form-group row-md-4">
+                     <label class="letraResultadoParabens">Parabéns!!! </label>
+                </div>
+
+            </div>`;
+            
+            document.getElementById("div_resultado").innerHTML += recebeHtml;
+            
+        }
+        
+        function botaoNovaSimulacao(){
+            
+            recebeHtml = `<div class="form-row">
+                            <div class="form-group col-md-11">
+                               <button type="button" class="btn btn-success" onclick="telaInicial();" id="btn_novasimulacao">Nova simulação</button>
+                                
+                            </div>
+                            
+                        </div>`;
+            
+            document.getElementById("div_conteudorodape").innerHTML += recebeHtml;
+        }
     
     
     
