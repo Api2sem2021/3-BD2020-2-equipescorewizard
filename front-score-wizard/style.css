@@ -10,6 +10,7 @@ body {
     width: 30%;
     padding: 30px;
     background-color: #f7f7f8a2;
+    box-shadow: 0px 0px 20px #6161618f;
 }
 
 
@@ -50,7 +51,7 @@ body {
 
 .bg-custom {
     background-color: #f7f7f8a4; 
-    box-shadow: 0px 0px 20px #a39c9cd3;
+    box-shadow: 0px 0px 20px #6161618f;
 }
 
 /* #footer {
