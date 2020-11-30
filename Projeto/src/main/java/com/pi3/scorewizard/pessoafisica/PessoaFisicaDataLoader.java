@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+
+import com.pi3.scorewizard.Model;
+
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.csv.CSVParser;
@@ -41,8 +44,7 @@ public class PessoaFisicaDataLoader implements CommandLineRunner {
                     csvRecord.get("idc_sexo"),
                     csvRecord.get("ano_dat_nascimento").equals("NULL") ? 0 : Integer.parseInt(csvRecord.get("ano_dat_nascimento")),
                     csvRecord.get("nom_cidade"),
-                    csvRecord.get("des_estado")
-                    );
+                    csvRecord.get("des_estado"), 0);
                 pessoaFisicaRepository.save(pessoaFisica);
             }
         }

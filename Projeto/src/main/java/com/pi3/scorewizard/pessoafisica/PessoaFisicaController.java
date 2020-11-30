@@ -23,7 +23,7 @@ public class PessoaFisicaController {
                                             @RequestParam String cidade,
                                             @RequestParam String estado) {
 
-      PessoaFisica pesf = new PessoaFisica(docCli, "", sexo, date, cidade, estado);
+      PessoaFisica pesf = new PessoaFisica(docCli, "", sexo, date, cidade, estado, 0);
       
       pessoafisicarepository.save(pesf);
       return "Saved";
@@ -57,4 +57,5 @@ public class PessoaFisicaController {
 
         return score.intValue();
     }
+    
 }

@@ -2,7 +2,6 @@ package com.pi3.scorewizard;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
@@ -11,9 +10,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.pi3.scorewizard.pessoafisica.PessoaFisica;
 import com.pi3.scorewizard.pessoafisica.PessoaFisicaController;
+import com.pi3.scorewizard.Model;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -25,6 +24,10 @@ public class IndexController {
 	PessoaFisicaController pf = new PessoaFisicaController();
 	
 	HelloController cont = new HelloController();
+	
+	Model model = new Model();
+	
+	PessoaFisicaController pc = new PessoaFisicaController();
 	
 	@PostMapping(value = "/submitFunc")
 	public ResponseEntity<Object> salvarFunc(@RequestBody final String funcData) throws IOException {
@@ -62,6 +65,10 @@ public class IndexController {
 		// 		}
 		//   	  i++;
 		// }
+	 	
+	 	String documento = "11819838777";
+	 	model.CalcularXP(documento);
+	 	
 	 	return new ResponseEntity<Object>(funcData, HttpStatus.OK);
 	}
 	  
