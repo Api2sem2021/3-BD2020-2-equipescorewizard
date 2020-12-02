@@ -31,6 +31,7 @@ public class Fonte {
 	private List<Operacao> operacoes;
 
 	@OneToMany(mappedBy = "fonte")
+	@JsonBackReference
 	private List<Pagamento> pagamentos;
 
 	public Fonte() {

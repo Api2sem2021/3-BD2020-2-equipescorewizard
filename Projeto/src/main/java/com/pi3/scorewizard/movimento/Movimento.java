@@ -27,7 +27,6 @@ public class Movimento {
 
 	@ManyToOne
 	@JoinColumn(name="fonte_id")
-	@JsonBackReference
 	private Fonte fonte;
 
 	@Nullable

@@ -16,7 +16,7 @@ public class MovimentoController {
     private MovimentoRepository movimentoRepository;
     
     @GetMapping(path="/getMovimentosByCpf")
-    public @ResponseBody ArrayList<Movimento> getAllPessoaFisica(String documento) {
+    public @ResponseBody ArrayList<Movimento> getMovimentosByCpf(String documento) {
         return movimentoRepository.findByPessoaFisicaDocumento(documento);
     }
 

@@ -54,7 +54,7 @@ public class PessoaFisicaController {
         operacao = 100.00 / pessoa.getOperacoesCount();
         parcela = 100.00 / pessoa.getMovimentosCount();
         atraso = Double.valueOf((movimentorepository.findByPessoaFisicaDocumento(pessoa.getDocumento()).size() * 100) / 100);
-        inadimplencia = (parcela * (atraso * 2))/100;
+        inadimplencia = (parcela * (atraso * 10))/100;
         score = 1000-(inadimplencia*100);
         
         System.out.println("Operacao " + pessoa.getOperacoesCount());
@@ -65,6 +65,25 @@ public class PessoaFisicaController {
         System.out.println("inadimplencia: " + inadimplencia.toString());
 
         return score.intValue();
+    }
+
+    @GetMapping(path="/getPessoaFisicaNewScore")
+    public @ResponseBody int getPessoaFisicaNewScore(@RequestParam String documento, @RequestParam ArrayList<Integer> movimentosId) {
+        PessoaFisica pessoa = pessoafisicarepository.findByDocumento(documento);
+        Double operacao, parcela, atraso, inadimplencia, score;
+
+        operacao = 100.00 / pessoa.getOperacoesCount();
+        parcela = 100.00 / pessoa.getMovimentosCount();
+        atraso = Double.valueOf(((movimentorepository.findByPessoaFisicaDocumento(pessoa.getDocumento()).size() - movimentosId.size()) * 100) / 100);
+        inadimplencia = (parcela * (atraso * 10))/10;
+        score = 1000-(inadimplencia*100);
+
+        return score.intValue();
+    }
+
+    @GetMapping(path="/getPessoaFisicaPendencias")
+    public @ResponseBody ArrayList<Movimento> getPessoaFisicaPendencias(String documento) {
+        return movimentorepository.findByPessoaFisicaDocumento(documento);
     }
 
 }
