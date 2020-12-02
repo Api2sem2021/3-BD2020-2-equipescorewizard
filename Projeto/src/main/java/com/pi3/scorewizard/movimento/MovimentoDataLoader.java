@@ -72,9 +72,9 @@ public class MovimentoDataLoader implements CommandLineRunner {
                 movimentoRepository.save(movimento);
                 count++;
 
-                if( count > 100){
-                    break;
-                }
+                // if( count > 100){
+                //     break;
+                // }
             }
         }
         System.out.println("Quantidade de movimentos: " + movimentoRepository.count());

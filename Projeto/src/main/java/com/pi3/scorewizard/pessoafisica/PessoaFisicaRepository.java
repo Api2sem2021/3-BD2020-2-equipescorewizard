@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PessoaFisicaRepository extends CrudRepository<PessoaFisica, String> {
 	ArrayList<PessoaFisica> findAll();
+
+	PessoaFisica findByDocumento(String documento);
 }

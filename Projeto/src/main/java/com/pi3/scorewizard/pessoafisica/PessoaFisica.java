@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 import com.pi3.scorewizard.movimento.Movimento;
 import com.pi3.scorewizard.operacao.Operacao;
+import com.pi3.scorewizard.pagamento.Pagamento;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -30,6 +31,22 @@ public class PessoaFisica {
 	private String estado;
 	private String senha;
 	
+	public String getDocumento() {
+		return this.documento;
+	}
+
+	public int getOperacoesCount() {
+		return operacoes.size();
+	}
+
+	public int getMovimentosCount() {
+		return movimentos.size();
+	}
+
+	public int getPagamentosCount() {
+		return pagamentos.size();
+	}
+
 	public PessoaFisica(){}
 
 	public PessoaFisica(String documento,String nome, String sexo, int anoNascimento, String cidade, String estado, String senha) {

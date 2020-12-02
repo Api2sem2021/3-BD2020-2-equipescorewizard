@@ -63,12 +63,12 @@ public class OperacaoDataLoader implements CommandLineRunner {
                     count, pf, null, mod,
                     csvRecord.get("tip_cli"),
                     csvRecord.get("num_unc"),
-                    0,//csvRecord.get("qtd_pcl").equals("NULL") ? 0 : Integer.parseInt(csvRecord.get("qtd_pcl")),
+                    csvRecord.get("qtd_pcl").equals("NULL") ? 0 : Integer.parseInt(csvRecord.get("qtd_pcl")),
                     csvRecord.get("dat_vct_ult_pcl").equals("NULL") ? null : new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(csvRecord.get("dat_vct_ult_pcl")),
                     csvRecord.get("dat_vct").equals("NULL") ? null : new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(csvRecord.get("dat_vct")),
-                    0.00,// csvRecord.get("vlr_ctrd_fta").equals("NULL") ? 0.00 : Double.parseDouble(csvRecord.get("vlr_ctrd_fta")),
-                    0.00,// csvRecord.get("vlr_ctrd").equals("NULL") ? 0.00 : Double.parseDouble(csvRecord.get("vlr_ctrd")),
-                    0.00//csvRecord.get("sdo_ddr").equals("NULL") ? 0.00 : Double.parseDouble(csvRecord.get("sdo_ddr"))
+                    csvRecord.get("vlr_ctrd_fta").equals("NULL") ? 0.00 : Double.parseDouble(csvRecord.get("vlr_ctrd_fta")),
+                    csvRecord.get("vlr_ctrd").equals("NULL") ? 0.00 : Double.parseDouble(csvRecord.get("vlr_ctrd")),
+                    csvRecord.get("sdo_ddr").equals("NULL") ? 0.00 : Double.parseDouble(csvRecord.get("sdo_ddr"))
                     );
                 operacaoRepository.save(operacao);
                 count++;

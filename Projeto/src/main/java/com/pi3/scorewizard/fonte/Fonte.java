@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.pi3.scorewizard.movimento.Movimento;
 import com.pi3.scorewizard.operacao.Operacao;
 import com.pi3.scorewizard.pagamento.Pagamento;
@@ -22,9 +23,11 @@ public class Fonte {
 	private String nomeFonte;
 
 	@OneToMany(mappedBy = "fonte")
+	@JsonBackReference
 	private List<Movimento> movimento;
 
 	@OneToMany(mappedBy = "fonte")
+	@JsonBackReference
 	private List<Operacao> operacoes;
 
 	@OneToMany(mappedBy = "fonte")

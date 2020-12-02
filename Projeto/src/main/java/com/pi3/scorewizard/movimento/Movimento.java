@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.pi3.scorewizard.fonte.Fonte;
 import com.pi3.scorewizard.pessoafisica.PessoaFisica;
 
@@ -20,11 +21,13 @@ public class Movimento {
 	private int id;
 
 	@ManyToOne
-    @JoinColumn(name="pessoaFisica_documento")
+	@JoinColumn(name="pessoaFisica_documento")
+	@JsonBackReference
 	private PessoaFisica pessoaFisica;
 
 	@ManyToOne
-    @JoinColumn(name="fonte_id")
+	@JoinColumn(name="fonte_id")
+	@JsonBackReference
 	private Fonte fonte;
 
 	@Nullable

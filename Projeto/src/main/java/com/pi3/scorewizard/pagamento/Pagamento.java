@@ -4,6 +4,7 @@ import java.util.Date;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.pi3.scorewizard.fonte.Fonte;
 import com.pi3.scorewizard.modalidade.Modalidade;
 import com.pi3.scorewizard.pessoafisica.PessoaFisica;
@@ -21,16 +22,19 @@ public class Pagamento {
 	private int id;
 
 	@ManyToOne
-    @JoinColumn(name="fonte_id")
+	@JoinColumn(name="fonte_id")
+	@JsonBackReference
 	private Fonte fonte;
 
 	@Nullable
 	@ManyToOne
-    @JoinColumn(name="pessoafisica_documento")
+	@JoinColumn(name="pessoafisica_documento")
+	@JsonBackReference
 	private PessoaFisica pessoaFisica;
 
 	@ManyToOne
-    @JoinColumn(name="modalidade_id")
+	@JoinColumn(name="modalidade_id")
+	@JsonBackReference
 	private Modalidade modalidade;
 
 	private Date dataPagamento;
