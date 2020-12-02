@@ -2,6 +2,7 @@ package com.pi3.scorewizard.pessoafisica;
 
 import java.util.ArrayList;
 
+import com.pi3.scorewizard.movimento.Movimento;
 import com.pi3.scorewizard.movimento.MovimentoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +58,7 @@ public class PessoaFisicaController {
         score = 1000-(inadimplencia*100);
         
         System.out.println("Operacao " + pessoa.getOperacoesCount());
-        System.out.println("Movimentos " + pessoa.getMovimentosCount());
+        System.out.println("Movimentos " + movimentorepository.findByPessoaFisicaDocumento(pessoa.getDocumento()).size());
         System.out.println("operacao: " + operacao.toString());
         System.out.println("parcela: " + parcela.toString());
         System.out.println("atraso: " + atraso.toString());
@@ -65,4 +66,5 @@ public class PessoaFisicaController {
 
         return score.intValue();
     }
+
 }
