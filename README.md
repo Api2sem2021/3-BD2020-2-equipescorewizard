@@ -60,7 +60,7 @@ O SPC, em parceria com os alunos do 3º semestre do curso de Banco de Dados da F
 
 # Acesse o Score Wizard!!
 
-![images](/uploads/552d28309f33b977f7b14aa982c8816f/images.png) https://wizardscorespc.herokuapp.com/
+![images](/uploads/552d28309f33b977f7b14aa982c8816f/images.png) https://scorewizardteste.herokuapp.com/index
 
 
 
@@ -129,6 +129,9 @@ Importar dados do dataset para aplicação                | Scrum Team;      |  
 ![Captura_de_tela_de_2020-11-09_20-13-36](/uploads/b0201db55edc50182e17a325cd93d24d/Captura_de_tela_de_2020-11-09_20-13-36.png)
 
 
+
+### [Vídeo  Sprint 2](https://youtu.be/ubwTZHn9iME "Vídeo Sprint 2:")
+
 #
 
 <h2>  * Entregas Sprint 3 (Final): </h2>
@@ -136,14 +139,14 @@ Importar dados do dataset para aplicação                | Scrum Team;      |  
 Requisito                                                       | Equipe Destinada | Grau de Prioridade | Status
 ---------------------------------------                         | ---------------- | :-------:          |  :--------:
 BurnDown                                                        | Scrum Master;    |         5          |  Em aberto
-Tela de DashBoard dos SteakHolders integrada ao Back-End        | Scrum Team;      |         1          |  Em aberto
-Tela de acesso privativo dos SteakHolders integrada ao Back-End | Scrum Team;      |         1          |  Em aberto
-Deploy Heroku                                                   | Scrum Team;      |         5          |  Em aberto
-Documentação aplicação - Parte 2/2                              | Scrum Master;    |         5          |  Em aberto
+Simulador de score com base em metas;                           | Scrum Team;      |         5          |  Em aberto
+Análise de objetivo selecionado pelo usuário;                   | Scrum Team;      |         5          |  Em aberto
+Sistema de gameficação com a conclusão de metas;                | Scrum Team;      |         5          |  Em aberto
+Documentação aplicação - Parte 2/2                              | Scrum Master;    |         3          |  Em aberto
+Atualização deploy Heroku                                       | Scrum Team;      |         5          |  Em aberto
+Criação Front-End (Tela Principal)                              | Scrum Team;      |         5          |  Em aberto
 
 #
-
-
 
 # REQUISITOS FUNCIONAIS E NÃO FUNCIONAIS
 
@@ -155,12 +158,7 @@ De acordo com o Setor de Negócio/MVP sugerido, verificar as possibilidades de c
 
 • Poderão utilizar de outras fontes de dados para compor produto
 
-• Sistema deve possibilitar o registro de novos usuários no sistema de cadastro positivo,
-assumindo-se perfis diferentes como os dois exemplos abaixo, mas não limitando-se a este:
-
- Empresas que têm o objetivo de consulta do cadastro positivo de consumidores e seu score de crédito  
- 
- Consumidores que desejam consultar seu score de crédito, histórico de pagamentos e também revogar o acesso de alguma empresa
+• Sistema deve possibilitar o registro de novos usuários no sistema de cadastro positivo;
 
 
 

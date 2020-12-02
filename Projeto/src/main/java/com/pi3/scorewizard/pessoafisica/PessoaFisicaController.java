@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+
 @Controller
 @RequestMapping(path="/pessoafisica")
 public class PessoaFisicaController {
@@ -24,15 +25,18 @@ public class PessoaFisicaController {
 	private MovimentoRepository movimentorepository;
 	
 	@PostMapping(path="/addpessoaf")
-    public @ResponseBody String addPessoaFisica (@RequestParam String docCli,
+    public @ResponseBody String addpessoaf (@RequestParam String docCli,
+    										@RequestParam String nome,
                                             @RequestParam String sexo,
                                             @RequestParam int date,
                                             @RequestParam String cidade,
-                                            @RequestParam String estado) {
+                                            @RequestParam String estado, 
+                                            @RequestParam String senha) {
 
-      PessoaFisica pesf = new PessoaFisica(docCli, "", sexo, date, cidade, estado);
-      
+      PessoaFisica pesf = new PessoaFisica(docCli, nome, sexo, date, cidade, estado, senha); 
+
       pessoafisicarepository.save(pesf);
+      
       return "Saved";
     }
 	

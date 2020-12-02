@@ -20,7 +20,7 @@
                         <label id="voltar">Voltar</label>
                     </a>
                 </i>
-                <form action="#" th:action="@{/index}" th:object="${index}" method="post">
+                <form action="#" th:action="@{/indexerror}" th:object="${index}" method="post">
                     <div class="form-group" >
                         <label for="InputDoc">CPF ou CNPJ:</label>
                         <input type="text" th:field="*{cpf}" class="form-control form-style mb-5" />

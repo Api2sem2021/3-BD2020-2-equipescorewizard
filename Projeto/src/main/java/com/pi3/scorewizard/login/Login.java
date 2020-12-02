@@ -12,21 +12,13 @@ public class Login {
 	@Id
 	private String cpf;
 	private String senha_usu;
-
-	public String getCpf() {
-		return this.cpf;
-	}
-
-	public String getSenha() {
-		return this.senha_usu;
-	}
 	
 	
 	public Login(){}
 	
-	public Login(String senha_usu, String pessoaFisica_cpf_pef) {
+	public Login(String cpf,String senha_usu) {
 		super();
 		this.senha_usu = senha_usu;
-		this.cpf = pessoaFisica_cpf_pef;
+		this.cpf = cpf;
 	}
 }
