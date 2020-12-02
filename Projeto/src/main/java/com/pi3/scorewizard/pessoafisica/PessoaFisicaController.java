@@ -54,7 +54,7 @@ public class PessoaFisicaController {
         operacao = 100.00 / pessoa.getOperacoesCount();
         parcela = 100.00 / pessoa.getMovimentosCount();
         atraso = Double.valueOf((movimentorepository.findByPessoaFisicaDocumento(pessoa.getDocumento()).size() * 100) / 100);
-        inadimplencia = (parcela * atraso)/10;
+        inadimplencia = (parcela * (atraso * 2))/100;
         score = 1000-(inadimplencia*100);
         
         System.out.println("Operacao " + pessoa.getOperacoesCount());
