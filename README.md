@@ -43,12 +43,19 @@ Itens que serão os diferenciais da aplicação:
 
 # INTEGRANTES
 
- * SABRINA RAFAELA CALADO MARIANO (Product Owner)
- * GABRIEL DE QUEIROZ CORDEIRO
+ * SABRINA RAFAELA CALADO MARIANO (Product Owner) :
+   https://www.linkedin.com/in/sabrina-rafaela-calado-mariano-029349108/
+ * GABRIEL DE QUEIROZ CORDEIRO :
+  https://www.linkedin.com/in/gabriel-queiroz-8a665815b/
  * ARTHUR CARDOSO RINALDI DA SILVA 
- * GUSTAVO RIBEIRO DOS SANTOS 
- * PERILO CARVALHO DE OLIVEIRA JUNIOR
- * GIOVANNI GUIDACE MARASSI TANURI (Master)
+  https://www.linkedin.com/in/arthur-cardoso-rinaldi-da-silva-7695b9175/
+ * GUSTAVO RIBEIRO DOS SANTOS :
+  https://www.linkedin.com/in/gustavo-ribeiro-dos-santos-0bbb08123/
+ * PERILO CARVALHO DE OLIVEIRA JUNIOR :
+  https://www.linkedin.com/in/perilo-carvalho-de-oliveira-junior-2b668216a/
+ * GIOVANNI GUIDACE MARASSI TANURI (Master) :
+  https://www.linkedin.com/in/giovanni-guidace-61982812a/
+
 
 #
 
@@ -150,6 +157,11 @@ Criação Front-End (Tela Principal)                              | Scrum Team; 
 ###   Burndown sprint 3 (Final):
 
 ![Captura_de_tela_de_2020-12-02_14-53-09](/uploads/e4b5f1a0aca003b73064f1559d825db3/Captura_de_tela_de_2020-12-02_14-53-09.png)
+
+#
+
+
+### [Vídeo  Sprint 3](https://www.youtube.com/watch?v=_1giEtKlFaM "Vídeo Sprint 3:")
 
 #
 
